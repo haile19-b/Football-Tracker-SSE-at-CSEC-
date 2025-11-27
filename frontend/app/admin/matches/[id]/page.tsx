@@ -608,51 +608,6 @@ export default function AdminMatchDetailPage() {
               </CardContent>
             </Card>
 
-            {/* Quick Actions */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Quick Actions</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                <Button 
-                  variant="outline" 
-                  className="w-full justify-start"
-                  onClick={() => {
-                    setNewEvent({
-                      eventType: 'goal',
-                      team: 'teamA',
-                      player: '',
-                      minute: match.time || 1
-                    });
-                  }}
-                >
-                  ⚽ Quick Goal for {match.teamA}
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full justify-start"
-                  onClick={() => {
-                    setNewEvent({
-                      eventType: 'goal',
-                      team: 'teamB',
-                      player: '',
-                      minute: match.time || 1
-                    });
-                  }}
-                >
-                  ⚽ Quick Goal for {match.teamB}
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full justify-start"
-                  onClick={loadMatch}
-                  disabled={isLoadingAction}
-                >
-                  <Loader2 className="h-4 w-4 mr-2" />
-                  Refresh Data
-                </Button>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>

@@ -119,7 +119,7 @@ export default function AdminMatchesPage() {
                 Add Match
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
+            <DialogContent className="sm:max-w-[425px] bg-green-50">
               <DialogHeader>
                 <DialogTitle>Add New Match</DialogTitle>
                 <DialogDescription>

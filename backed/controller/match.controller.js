@@ -1,6 +1,18 @@
 import Match from "../model/match.model.js";
 import { matchEventManager } from "../utils/eventManager.js";
 
+export const getMatches = async (req, res) => {
+  try {
+    const matches = await Match.find().sort({ createdAt: -1 });
+    return res.json(matches);
+  } catch (error) {
+    return res.status(500).json({ 
+      error: "Error fetching matches: " + error.message,
+      success: false 
+    });
+  }
+};
+
 export const addMatch = async (req, res) => {
     const { MatchData } = req.body;
 
